@@ -1,0 +1,91 @@
+<mat-card>
+  <form [formGroup]="filterForm" (ngSubmit)="applyFilter()">
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Inicio</mat-label>
+      <input matInput [matDatepicker]="startPicker" formControlName="fechaInicioPrestamo">
+      <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+      <mat-datepicker #startPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Fin</mat-label>
+      <input matInput [matDatepicker]="endPicker" formControlName="fechaFinPrestamo">
+      <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+      <mat-datepicker #endPicker></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Filtrar</button>
+  </form>
+</mat-card>
+
+<mat-card>
+  <table mat-table [dataSource]="datasource" class="mat-elevation-z8">
+    <!-- Define columns for your table here (ID, Nombre, Monto, etc.) -->
+    <!-- Example of a column: -->
+    <ng-container matColumnDef="idPrestamo">
+      <th mat-header-cell *matHeaderCellDef> ID Prestamo </th>
+      <td mat-cell *matCellDef="let prestamo"> {{prestamo.idPrestamo}} </td>
+    </ng-container>
+    <!-- Other columns for nombreUsuario, montoPrestamo, fechaInicioPrestamo, fechaFinPrestamo, etc. -->
+
+
+
+    <!-- Password Column -->
+    <ng-container matColumnDef="idUsuario">
+      <th mat-header-cell *matHeaderCellDef> idUsuario </th>
+      <td mat-cell *matCellDef="let element"> {{element.idUsuario}} </td>
+    </ng-container>
+
+    <!-- Name Column
+    idUsuario: number=0;
+  nombreUsuario: String;
+  idPrestamo: number;
+  montoPrestamo: number;
+  fechaInicioPrestamo: Date;
+  fechaFinPrestamo: Date;
+  estadoPrestamo: String; -->
+    <ng-container matColumnDef="nombreUsuario">
+      <th mat-header-cell *matHeaderCellDef> nombreUsuario </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombreUsuario}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="montoPrestamo">
+      <th mat-header-cell *matHeaderCellDef> montoPrestamo </th>
+      <td mat-cell *matCellDef="let element"> {{element.montoPrestamo}} </td>
+    </ng-container>
+
+    <!-- Name Column
+        idUsuario: number=0;
+      nombreUsuario: String;
+      idPrestamo: number;
+      montoPrestamo: number;
+      fechaInicioPrestamo: Date;
+      fechaFinPrestamo: Date;
+      estadoPrestamo: String; -->
+
+    <!-- Fecha Column -->
+    <ng-container matColumnDef="fechaInicioPrestamo">
+      <th mat-header-cell *matHeaderCellDef> fechaInicioPrestamo </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaInicioPrestamo|date:'dd/MM/yyyy'}} </td>
+    </ng-container>
+
+    <!-- Fecha Column -->
+    <ng-container matColumnDef="fechaFinPrestamo">
+      <th mat-header-cell *matHeaderCellDef> fechaFinPrestamo </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaFinPrestamo|date:'dd/MM/yyyy'}} </td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="estadoPrestamo">
+      <th mat-header-cell *matHeaderCellDef> estadoPrestamo </th>
+      <td mat-cell *matCellDef="let element"> {{element.estadoPrestamo}} </td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>

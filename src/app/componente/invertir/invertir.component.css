@@ -1,3 +1,19 @@
+.botonfiltrado{
+
+  margin-top: 10px;
+  font-size:40px;
+
+}
+.planesdepago{
+
+  background-color:Green;
+
+}
+.botonregistro{
+
+  margin-top: 10px;
+  font-size:50px;
+}
 *{
   margin: 0;
   padding: 0;
@@ -6,7 +22,6 @@
   box-sizing: border-box;
   font-size: 100%;
 }
-
 body{
   font-family: sans-serif;
   margin: 0;
@@ -195,21 +210,18 @@ h1.inicio {
 /*hasta aqui co*/
 /*Contenedor de los servicios*/
 .servicios{
-  .servicios {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    margin: 20px auto; /* Reduce el margen superior para acercarlo hacia arriba */
-    text-align: center;
-    background-color: white;
-    padding: 5px 0px 0px; /* Ajusta el padding superior si es necesario */
-    border-radius: 30px;
-    box-shadow: 0px 8px 14px #888888;
-    position: relative;
-  }
-
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 65px auto;
+  text-align: center;
+  background-color: white;
+  padding: 10px 0px 0px;
+  border-radius: 30px;
+  box-shadow: 0px 8px 14px #888888;
+  position: relative;
 }
 .card{
   width: 100%;
@@ -513,20 +525,18 @@ h2.serviciosh2{
 }
 
 
-.recomendaciones {
-  text-align: center; /* Centra el texto dentro de la sección */
-}
+.recomendaciones{
 
-.titulo h1,
-.subtitulo h2 {
-  margin: 0; /* Elimina el margen por defecto */
-}
+  padding: 60px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  scroll-margin-top: 78px;
 
-.col2 {
   display: flex;
-  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-  align-items: center; /* Centra el contenido horizontalmente */
-  margin-top: 20px; /* Espacio superior para separar del texto anterior */
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -620,7 +630,6 @@ footer li{
   }
 }
 
-
 .Titulo{
   font-weight: bold;
   text-align: center;
@@ -663,6 +672,3 @@ footer li{
   font-size: 15px;
 }
 
-.subtitulo{
-  text-color: Green;
-}

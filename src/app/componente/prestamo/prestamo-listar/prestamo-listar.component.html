@@ -1,0 +1,82 @@
+
+
+<br>
+
+<div class="hola">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="datasource" matSort>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="idPrestamo">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.idPrestamo}} </td>
+      </ng-container>
+
+      <!-- Password Column -->
+      <ng-container matColumnDef="monto">
+        <th mat-header-cell *matHeaderCellDef> monto </th>
+        <td mat-cell *matCellDef="let element"> {{element.monto}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="tasaInteres">
+        <th mat-header-cell *matHeaderCellDef> tasaInteres </th>
+        <td mat-cell *matCellDef="let element"> {{element.tasaInteres}} </td>
+      </ng-container>
+
+
+      <!-- Fecha Column -->
+      <ng-container matColumnDef="fechaInicio">
+        <th mat-header-cell *matHeaderCellDef> fecha Inicio </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaInicio|date:'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+
+
+      <!-- Fecha Column -->
+      <ng-container matColumnDef="fechaFin">
+        <th mat-header-cell *matHeaderCellDef> fecha Fin </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaFin|date:'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+
+      <!-- Surname Column -->
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef> Estado </th>
+        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+      </ng-container>
+
+      <!-- Role Column -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Usuario </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="accion02">
+        <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="warn"
+                  (click)="openDialog(element.idPrestamo)"><span class="material-icons">delete_sweep</span></button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="accion01">
+        <th mat-header-cell *matHeaderCellDef> Update </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="primary"
+                  [routerLink]="['/Prestamo',element.idPrestamo]">
+            <span class="material-icons">update</span>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+</div>
