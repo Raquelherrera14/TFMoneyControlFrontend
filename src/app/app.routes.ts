@@ -26,6 +26,7 @@ import {
 } from './componente/prestamo/Prestamo-filtroperiodo/prestamo-filtroperiodo.component';
 import {PrestamoCorrespondienteComponent} from './componente/prestamo/prestamo-correspondiente/prestamo-correspondiente.component';
 import {TransaccionFiltroperiodo} from './componente/transaccion/transaccion-filtroperiodo/transaccion-filtroperiodo';
+import {EstadisticaprestamoComponent} from './componente/prestamo/estadisticaprestamo/estadisticaprestamo.component';
 
 export const routes: Routes = [
  {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -49,7 +50,7 @@ export const routes: Routes = [
   {path:'Prestamo', component:PrestamoComponent},
   {path:'Prestamo-Listar', component:PrestamoListarComponent},
   {path:'Prestamofiltrado' ,component:PrestamoFiltroperiodoComponent},
-
+  {path:'estadistica', component:EstadisticaprestamoComponent},
   {path: 'prestamo-correspondiente', component:PrestamoCorrespondienteComponent},
   {path: 'login', component: LoginComponent}
 
