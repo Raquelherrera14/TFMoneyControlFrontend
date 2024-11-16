@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<form [formGroup]="garantiaForm" class="form-container">
+<div class="flex flex-column md:flex-row">
+  <div class="w-full flex flex-column align-items-center justify-content-center gap-3 py-5">
+    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+      <label class="w-6rem">Tipo de Garantia</label>
+      <input pInputText id="tipogarantia" formControlName="tipoGarantia" type="text" class="w-12rem" />
+    </div>
+    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+      <label class="w-6rem">Valor Garantia</label>
+      <input pInputText id="valorgarantia" formControlName="valorGarantia" type="text" class="w-12rem" />
+    </div>
+    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+      <label class="w-6rem">ID de Usuario</label>
+      <input pInputText id="codigousuario" formControlName="idUsuario" type="text" class="w-12rem" />
+    </div>
+    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+      <label class="w-6rem">Descripcion</label>
+      <input pInputText id="descripcion" formControlName="descripcion" type="text" class="w-12rem" />
+    </div>
+
+
+    <p-button label="" icon="pi pi-user" styleClass="w-10rem mx-auto" (click)="onsubmit()">Dar Garantia</p-button>
+  </div>
+  </div>
+</form>
+<app-garantia-listar />
+
+
+

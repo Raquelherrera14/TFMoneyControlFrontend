@@ -1,0 +1,16 @@
+.example-card{
+  margin: 0 auto;
+  width: 600px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo{
+
+  margin-left: 25%;
+
+  color: black;
+}

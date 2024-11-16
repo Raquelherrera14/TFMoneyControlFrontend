@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+
+<form [formGroup]="transaccionForm" class="form-container">
+  <div class="flex flex-column md:flex-row">
+    <div class="w-full flex flex-column align-items-center justify-content-center gap-3 py-5">
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label class="w-6rem">Monto de Transaccion</label>
+        <input pInputText id="montoTransaccion" formControlName="montoTransaccion" type="number" class="w-12rem" />
+      </div>
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label class="w-6rem">Fecha de Transaccion</label>
+        <input pInputText id="fechaTransaccion" formControlName="fechaTransaccion" type="date" class="w-12rem" />
+      </div>
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label class="w-6rem">Tipo Transaccion</label>
+        <input pInputText id="tipoTransaccion" formControlName="tipoTransaccion" type="text" class="w-12rem" />
+      </div>
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label class="w-6rem">Descripcion</label>
+        <input pInputText id="descripcion" formControlName="descripcion" type="text" class="w-12rem" />
+      </div>
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label class="w-6rem">Metodo Pago</label>
+        <input pInputText id="metodoPago" formControlName="metodoPago" type="text" class="w-12rem" />
+      </div>
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label class="w-6rem">Estado de Transaccion</label>
+        <input pInputText id="estadoTransaccion" formControlName="estadoTransaccion" type="text" class="w-12rem" />
+      </div>
+
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+        <label class="w-6rem">ID de Prestamo</label>
+        <input pInputText id="idPrestamo" formControlName="idPrestamo" type="number" class="w-12rem" />
+      </div>
+
+
+      <p-button label="" icon="pi pi-user" styleClass="w-10rem mx-auto" (click)="onsubmit()">Dar Trasaccion</p-button>
+    </div>
+  </div>
+</form>
+
+<div class="bototransicion" style="display: flex; align-items: center; justify-content: space-between;">
+  <button style="font-size:20px;width: 150px; height: 50px;
+    border: 2px  solid red; background-color: greenyellow;
+     color:black"
+          mat-button color="accent"
+          [routerLink]="['/Transaccionlistar']">Ver transacciones
+  </button>
+</div>
+
