@@ -1,58 +1,125 @@
-.comofunciona {
-  background-color: #123a51;
-  text-align: center;
-  padding: 50px 20px;
+
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
-}
-
-.subComofunciona h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.subComofunciona h3 {
-  font-size: 1.2rem;
+  background-color: #f4f4f4;
+  color: #333;
   line-height: 1.6;
-  max-width: 800px;
+}
+
+h1, h2 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+p {
+  margin: 0.5em 0;
+  text-align: justify;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
   margin: 0 auto;
 }
 
-.containerComofunciona {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+a {
+  color: #3498db;
+  text-decoration: none;
 }
 
-.boxC {
-  background-color: #ffffff;
-  color: #123a51;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 300px;
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+
+/* Comunidad Section */
+.comunidad {
   padding: 20px;
-  transition: transform 0.3s ease-in-out;
+  background-color: #ecf0f1;
 }
 
-.boxC:hover {
-  transform: scale(1.05);
+.subComunidad h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-.boxC img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-}
-
-.boxC h2, .boxC h3 {
-  margin: 15px 0;
+.subComunidad p {
   font-size: 1.2rem;
+  color: #7f8c8d;
+  text-align: center;
 }
 
-.boxC label, .boxC p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #555555;
+/* Testimonios */
+.containerComunidad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
+
+.boxC2 {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.boxC2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boxC2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.boxC2 p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+/* Chatsito Section */
+.chatsito {
+  padding: 20px;
+  text-align: center;
+}
+
+.fotoCHAT img {
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subComunidad h1 {
+    font-size: 1.8rem;
+  }
+
+  .subComunidad p {
+    font-size: 1rem;
+  }
+
+  .boxC2 h2 {
+    font-size: 1.3rem;
+  }
+
+  .boxC2 p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/*
+
+
+
+/
+ */
