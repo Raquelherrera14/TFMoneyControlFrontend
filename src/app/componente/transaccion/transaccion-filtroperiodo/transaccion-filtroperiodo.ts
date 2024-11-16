@@ -11,24 +11,26 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { DatePipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MatNativeDateModule } from '@angular/material/core';  // Agrega esto
+import { MatNativeDateModule } from '@angular/material/core';
+import {NavbarComponent} from "../../navbar/navbar.component";  // Agrega esto
 
 @Component({
   selector: 'app-transaccion-filtroperiodo',
   templateUrl: './transaccion-filtroperiodo.html',
   standalone: true,
-  imports: [
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatTableModule,
-    DatePipe,
-    RouterModule,
-    MatNativeDateModule
-  ],
+    imports: [
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatButtonModule,
+        MatTableModule,
+        DatePipe,
+        RouterModule,
+        MatNativeDateModule,
+        NavbarComponent
+    ],
   styleUrls: ['./transaccion-filtroperiodo.css']
 })
 export class TransaccionFiltroperiodo implements OnInit {
