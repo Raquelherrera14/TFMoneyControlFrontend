@@ -6,6 +6,7 @@ import {catchError} from 'rxjs/operators';
 import {environment} from '../../environments/environment';
 import {Prestamoperiodo} from '../model/prestamoperiodo';
 import {PrestamoCorrespondiente} from '../model/prestamoCorrespondiente';
+import {Estadisticasprestamo} from '../model/estadisticasprestamo';
 
 
 @Injectable({
@@ -90,5 +91,11 @@ export class PrestamoService {
   obtenerPagoCalculado(prestamoId: number): Observable<PrestamoCorrespondiente[]> {
     return this.http.get<PrestamoCorrespondiente[]>(`${this.url}/api/Prestamo//PrestamosPeriodo/{fechaInicio}/{fechaFin}`);
   }*/
+
+  calcularEstadisticasPrestamos(): Observable<Estadisticasprestamo[]> {
+    return this.http.get<Estadisticasprestamo[]>(`${this.url}/api/Prestamo/PrestamosEstadisticas`);
+  }
+
+
 
 }

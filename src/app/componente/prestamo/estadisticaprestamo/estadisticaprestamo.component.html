@@ -1,0 +1,10 @@
+<div style="width: 70%; margin: auto;">
+  <h2>Estadísticas de Préstamos</h2>
+  <canvas id="barChart"></canvas>
+</div>
+<div *ngIf="!datosCargados" style="text-align: center; margin-top: 20px;">
+  <p>Cargando datos...</p>
+</div>
+<div *ngIf="error" style="text-align: center; color: red; margin-top: 20px;">
+  <p>Error al cargar los datos: {{ error }}</p>
+</div>

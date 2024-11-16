@@ -1,0 +1,13 @@
+.bototransicion{
+
+  margin-top: 5px;
+  font-size:180px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-size: 100%;
+}
