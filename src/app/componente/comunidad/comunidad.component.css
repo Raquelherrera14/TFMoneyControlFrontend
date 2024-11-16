@@ -1,9 +1,8 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #26D698;
+  color: black;
   line-height: 1.6;
 }
 
@@ -38,7 +37,7 @@ a:hover {
 /* Comunidad Section */
 .comunidad {
   padding: 20px;
-  background-color: #ecf0f1;
+  background-color: #26D698;
 }
 
 .subComunidad h1 {

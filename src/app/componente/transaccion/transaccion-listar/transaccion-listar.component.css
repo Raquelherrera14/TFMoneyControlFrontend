@@ -1,0 +1,121 @@
+/* Contenedor principal */
+.mat-elevation-z8 {
+  position: relative;
+  background-color: #f5f5f5; /* Fondo color gris claro */
+
+}
+
+.body{
+
+  position: relative;
+  padding: 20px;
+  background-color:green;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-qI8h-34g4VJ3hNiLR1DcRObCJOKQ4mTEA&s'); /* Fondo con imagen */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+bototransicion{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-transform: none;
+}
+
+
+/* Contenedor de columnas */
+.contenedor-columnas {
+  display: flex; /* Usamos flexbox para organizar dos columnas */
+  justify-content: space-between; /* Espacio uniforme entre columnas */
+  align-items: flex-start; /* Alineación al inicio */
+  gap: 20px; /* Espaciado entre columnas */
+}
+
+/* Columna del formulario */
+.columna-formulario {
+  flex: 1; /* Ocupa el espacio disponible */
+  width: 70%; /* Aseguramos que ocupe el 70% del contenedor */
+}
+
+/* Contenedor de la tabla en columnas */
+.tabla-columnas {
+  display: grid; /* Usamos grid para distribuir los elementos en columnas */
+  grid-template-columns: repeat(8, 1fr); /* 8 columnas para cada dato */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilos de las columnas de título */
+.columna-titulo {
+  font-weight: bold;
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Estilos de las columnas de datos */
+.columna-dato {
+  display: contents; /* Para que los divs dentro se distribuyan según el grid */
+}
+
+.columna-dato div {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Columna de la imagen */
+.columna-imagen {
+  flex: 0.3; /* Ocupa el 30% restante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna-imagen img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* Botón Ver Transacciones */
+.bototransicion button {
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid red;
+  background-color: greenyellow;
+  color: black;
+  border-radius: 4px;
+  text-transform: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bototransicion button:hover {
+  background-color: lightgreen;
+  border-color: darkred;
+  color: black;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .contenedor-columnas {
+    flex-direction: column; /* Las columnas se apilan */
+  }
+
+  .columna-formulario, .columna-imagen {
+    width: 100%;
+  }
+
+  .bototransicion button {
+    width: 100%;
+  }
+}

@@ -1,7 +1,9 @@
 
 .botontransaacion{
-  margin-top: 1800px;
-  font-size:0px;
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  z-index: 1000;
 }
 
 *{

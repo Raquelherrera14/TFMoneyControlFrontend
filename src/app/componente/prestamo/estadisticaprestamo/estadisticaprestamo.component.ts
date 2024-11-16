@@ -3,15 +3,17 @@ import { Chart } from 'chart.js/auto';
 import {PrestamoService} from '../../../services/prestamo.service';
 import {Estadisticasprestamo} from '../../../model/estadisticasprestamo';
 import {NgIf} from '@angular/common';
+import {NavbarComponent} from "../../navbar/navbar.component";
 
 
 @Component({
   selector: 'app-estadisticasprestamo',
   templateUrl: './estadisticaprestamo.component.html',
   styleUrls: ['./estadisticaprestamo.component.css'],
-  imports: [
-    NgIf
-  ],
+    imports: [
+        NgIf,
+        NavbarComponent
+    ],
   standalone: true
 })
 export class EstadisticaprestamoComponent implements OnInit {
