@@ -1,55 +1,75 @@
-.hola{
-
-  display: flex;
-  background-color: royalblue;
-
-}
-.form-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+body{
+  background-color:#26D698;
 }
 
-.button-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Hace que el contenido se acomode en una sola columna */
+  gap: 20px; /* Espaciado entre los elementos */
+  justify-items: center; /* Centra los elementos dentro del grid */
+  padding: 20px; }
+
+.mat-elevation-z8 {
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para evitar que la tabla se estire demasiado */
+  overflow-x: auto; /* Permite el desplazamiento horizontal si la tabla es más ancha que el contenedor */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle efecto de elevación */
 }
 
-.view-button {
-  background-color: #a7f442;
-  color: #333;
-  border-radius: 12px;
-  font-weight: bold;
-  padding: 10px;
-  border: 1px solid #ff0000;
-}
+table {
+  width: 100%;
 
-.view-button:hover {
-  background-color: #8ad83e;
-  color: #fff;
-}
+  border-collap
+  .form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: grid;
 
-label {
-  font-weight: bold;
-}
+  }
 
-input {
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
+  .button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 
-p-button {
-  background-color: #007bff;
-  color: #fff;
-  font-weight: bold;
-}
+  .view-button {
+    background-color: #a7f442;
+    color: #333;
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ff0000;
+  }
 
-p-button:hover {
-  background-color: #0056b3;
+  .view-button:hover {
+    background-color: #8ad83e;
+    color: #fff;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  p-button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  p-button:hover {
+    background-color: #0056b3;
+  }
 }

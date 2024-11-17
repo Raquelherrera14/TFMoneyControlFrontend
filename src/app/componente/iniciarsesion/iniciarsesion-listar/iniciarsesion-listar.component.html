@@ -1,90 +1,88 @@
 <app-navbar></app-navbar>
-<br>
-<br>
+<body>
+<div class="content-container">
+  <!-- Título -->
+  <h1 class="titulo">Control De Usuarios que Accedieron</h1>
 
-<h1 class="titulo">Control De Usuarios que Accedieron</h1>
-<br><br>
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="datasource" matSort>
+  <div class="grid-container">
+    <!-- Tabla de Usuarios -->
+    <div class="table-container mat-elevation-z8">
+      <table mat-table [dataSource]="datasource" matSort class="compact-table">
+        <!-- Define las columnas como lo hiciste antes -->
+        <ng-container matColumnDef="idUsuario">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.idUsuario}} </td>
+        </ng-container>
+        <ng-container matColumnDef="contrasena">
+          <th mat-header-cell *matHeaderCellDef> Contraseña </th>
+          <td mat-cell *matCellDef="let element"> {{element.contrasena}} </td>
+        </ng-container>
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        </ng-container>
+        <ng-container matColumnDef="apellido">
+          <th mat-header-cell *matHeaderCellDef> Apellido </th>
+          <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
+        </ng-container>
+        <ng-container matColumnDef="direccion">
+          <th mat-header-cell *matHeaderCellDef> Dirección </th>
+          <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="telefono">
+          <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+          <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
+        </ng-container>
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+        <ng-container matColumnDef="enabled">
+          <th mat-header-cell *matHeaderCellDef> Activo </th>
+          <td mat-cell *matCellDef="let element"> {{element.enabled}} </td>
+        </ng-container>
+        <ng-container matColumnDef="nombreRol">
+          <th mat-header-cell *matHeaderCellDef> Rol </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombreRol}} </td>
+        </ng-container>
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="idUsuario">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.idUsuario}} </td>
-    </ng-container>
+        <ng-container matColumnDef="accion02">
+          <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="warn"
+                    (click)="openDialog(element.idUsuario)">
+              <span class="material-icons">delete_sweep</span>
+            </button>
+          </td>
+        </ng-container>
 
-    <!-- Password Column -->
-    <ng-container matColumnDef="contrasena">
-      <th mat-header-cell *matHeaderCellDef> Contraseña </th>
-      <td mat-cell *matCellDef="let element"> {{element.contrasena}} </td>
-    </ng-container>
+        <ng-container matColumnDef="accion01">
+          <th mat-header-cell *matHeaderCellDef> Update </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="primary"
+                    [routerLink]="['/Iniciarsesion-nuevo-edit',element.idUsuario]">
+              <span class="material-icons">update</span>
+            </button>
+          </td>
+        </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="nombre">
-      <th mat-header-cell *matHeaderCellDef> Nombre </th>
-      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-    </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
 
-    <!-- Surname Column -->
-    <ng-container matColumnDef="apellido">
-      <th mat-header-cell *matHeaderCellDef> Apellido </th>
-      <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
-    </ng-container>
+      <mat-paginator [pageSizeOptions]="[10, 15, 25]"
+                     showFirstLastButtons
+                     aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
 
-    <!-- Address Column -->
-    <ng-container matColumnDef="direccion">
-      <th mat-header-cell *matHeaderCellDef> Dirección </th>
-      <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
-    </ng-container>
-
-    <!-- Phone Column -->
-    <ng-container matColumnDef="telefono">
-      <th mat-header-cell *matHeaderCellDef> Teléfono </th>
-      <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
-    </ng-container>
-
-    <!-- Email Column -->
-    <ng-container matColumnDef="email">
-      <th mat-header-cell *matHeaderCellDef> Email </th>
-      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
-    </ng-container>
-
-    <!-- Active Column -->
-    <ng-container matColumnDef="enabled">
-      <th mat-header-cell *matHeaderCellDef> Activo </th>
-      <td mat-cell *matCellDef="let element"> {{element.enabled}} </td>
-    </ng-container>
-
-    <!-- Role Column -->
-    <ng-container matColumnDef="nombreRol">
-      <th mat-header-cell *matHeaderCellDef> Rol </th>
-      <td mat-cell *matCellDef="let element"> {{element.nombreRol}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="accion02">
-      <th mat-header-cell *matHeaderCellDef> Eliminar </th>
-      <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn"
-                (click)="openDialog(element.idUsuario)"><span class="material-icons">delete_sweep</span></button>
-      </td>
-    </ng-container>
-
-    <ng-container matColumnDef="accion01">
-      <th mat-header-cell *matHeaderCellDef> Update </th>
-      <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="primary"
-                [routerLink]="['/Iniciarsesion-nuevo-edit',element.idUsuario]">
-          <span class="material-icons">update</span>
-        </button>
-      </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-
-  <mat-paginator [pageSizeOptions]="[10, 15, 25]"
-                 showFirstLastButtons
-                 aria-label="Select page of periodic elements">
-  </mat-paginator>
+    <!-- Columna de Imagen y Frases -->
+    <div class="image-text-column">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuDyMe5CIk86B4cEY1L_gpvJZa7j3vWcJp8w&s" alt="Imagen de ejemplo" class="user-image">
+      <p class="user-quote">"El usuario es la clave para el éxito"</p>
+      <img src="https://w7.pngwing.com/pngs/359/425/png-transparent-user-computer-icons-scalable-graphics-user-account-emoticon-nuvola.png" alt="Imagen de ejemplo" class="user-image">
+      <p class="user-quote">"La seguridad es nuestra prioridad"</p>
+    </div>
+  </div>
 </div>
+</body>
