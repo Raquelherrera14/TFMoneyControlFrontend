@@ -11,40 +11,40 @@
       <!-- Nombre -->
       <div class="form-group flex flex-wrap justify-content-center align-items-center gap-2">
         <label for="nombre" class="w-6rem">Nombre</label>
-        <input id="nombre" formControlName="nombre" type="text" class="w-12rem p-inputtext" />
+        <input id="nombre" formControlName="nombre" type="text" class="w-12rem p-inputtext" placeholder="Ingresa tu nombre" />
       </div>
 
-      <!-- Apellido Field -->
+      <!-- Apellido -->
       <div class="form-group flex flex-wrap justify-content-center align-items-center gap-2">
         <label for="apellido" class="w-6rem">Apellido</label>
-        <input id="apellido" formControlName="apellido" type="text" class="w-12rem p-inputtext" />
+        <input id="apellido" formControlName="apellido" type="text" class="w-12rem p-inputtext" placeholder="Ingresa tu apellido" />
       </div>
 
-      <!-- Contraseña Field -->
+      <!-- Contraseña -->
       <div class="form-group flex flex-wrap justify-content-center align-items-center gap-2">
         <label for="contrasena" class="w-6rem">Contraseña</label>
-        <input id="contrasena" formControlName="contrasena" type="password" class="w-12rem p-inputtext" />
+        <input id="contrasena" formControlName="contrasena" type="password" class="w-12rem p-inputtext" placeholder="contraseña segura ·~%#" />
       </div>
 
-      <!-- Dirección Field -->
+      <!-- Dirección -->
       <div class="form-group flex flex-wrap justify-content-center align-items-center gap-2">
         <label for="direccion" class="w-6rem">Dirección</label>
-        <input id="direccion" formControlName="direccion" type="text" class="w-12rem p-inputtext" />
+        <input id="direccion" formControlName="direccion" type="text" class="w-12rem p-inputtext" placeholder="Ingresa tu dirección" />
       </div>
 
-      <!-- Teléfono Field -->
+      <!-- Teléfono -->
       <div class="form-group flex flex-wrap justify-content-center align-items-center gap-2">
         <label for="telefono" class="w-6rem">Teléfono</label>
-        <input id="telefono" formControlName="telefono" type="text" class="w-12rem p-inputtext" />
+        <input id="telefono" formControlName="telefono" type="text" class="w-12rem p-inputtext" placeholder="Ingresa tu número de teléfono" />
       </div>
 
-      <!-- Email Field -->
+      <!-- Email -->
       <div class="form-group flex flex-wrap justify-content-center align-items-center gap-2">
         <label for="email" class="w-6rem">Email</label>
-        <input id="email" formControlName="email" type="email" class="w-12rem p-inputtext" />
+        <input id="email" formControlName="email" type="email" class="w-12rem p-inputtext" placeholder="Ingresa tu correo electrónico" />
       </div>
 
-      <!-- Habilitar Cuenta Field -->
+      <!-- Habilitar Cuenta -->
       <div class="form-group flex flex-wrap justify-content-center align-items-center gap-2">
         <label for="habilitarCuenta" class="w-6rem">Habilitar cuenta</label>
         <p-treeSelect
@@ -54,11 +54,11 @@
           [(ngModel)]="selectedEstado"
           [ngModelOptions]="{ standalone: true }"
           [options]="Estado"
-          placeholder="Select estado">
+          placeholder="Selecciona un estado">
         </p-treeSelect>
       </div>
 
-      <!-- Rol Field -->
+      <!-- Rol -->
       <div class="form-group flex flex-wrap justify-content-center align-items-center gap-2">
         <label for="rol" class="w-6rem">Rol</label>
         <p-treeSelect
@@ -68,7 +68,7 @@
           [(ngModel)]="selectedRol"
           [ngModelOptions]="{ standalone: true }"
           [options]="Rol"
-          placeholder="Select Rol">
+          placeholder="Selecciona un rol">
         </p-treeSelect>
       </div>
 
@@ -76,7 +76,6 @@
       <div class="flex justify-content-center">
         <p-button label="Registrar" icon="pi pi-user" styleClass="w-10rem mx-auto" (click)="onsubmit()"></p-button>
       </div>
-
     </div>
   </div>
 </form>

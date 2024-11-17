@@ -13,7 +13,7 @@
 }
 
 .form-wrapper {
-  background: white;
+  background: #26D698;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -36,4 +36,30 @@
 .button-cell {
   text-align: center;
   padding-top: 10px;
+}
+
+
+butonver{
+  background-color: #0056b3; /* Fondo azul */
+  color: black; /* Letras blancas */
+  text-align: center;
+  padding: 10px 20px; /* Ajuste de espacio interno para que se vea mejor */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambio del cursor al pasar por encima */
+  font-size: 16px; /* Tamaño de fuente */
+  margin-left: 700px; /* Para desplazar el botón hacia la derecha */
+  display: inline-block; /* Asegura que el botón esté en línea con otros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar una sombra suave para un efecto elevado */
+
+}
+button.mat-raised-button {
+  background-color: #0056b3;
+  color: darkblue;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+button.mat-raised-button:hover {
+  background-color: #0056b3;
 }

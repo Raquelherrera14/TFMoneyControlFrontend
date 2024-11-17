@@ -1,8 +1,25 @@
 
+<body>
 
-<br>
+<div class="botonregistro" style="display: flex; align-items: center; justify-content: space-between;">
+ <h1 style="margin-left:400px; display:flex">Tus prestamos seguros<br> En Money Control</h1>
+  <button style="font-size: 16px;
+    width: auto;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#24422f  ;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+"
 
-<div class="hola">
+          mat-button color="accent"
+          [routerLink]="['/Invertir']">Salir
+  </button>
+</div>
+
+<div class="grid-container">
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="datasource" matSort>
 
@@ -74,9 +91,11 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                   showFirstLastButtons
-                   aria-label="Select page of periodic elements">
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
     </mat-paginator>
+
+
   </div>
 </div>
+
+</body>

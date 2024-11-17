@@ -14,3 +14,16 @@
   box-sizing: border-box;
   font-size: 100%;
 }
+body{
+
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonscout.com%2Flottie-animations%2Ffinance&psig=AOvVaw3BmNjYN2r9vk4znWFmYGLs&ust=1731952231922000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCICi_v7244kDFQAAAAAdAAAAABATa=i&url=https%3A%AAAABAT");
+background-repeat: no-repeat;
+  background-position: center;
+}
+html, body {
+  height: 100%; /* Asegura que el body ocupe todo el alto de la ventana */
+  background-color: #26D698; /* Color de fondo */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 0; /* Elimina el padding predeterminado */
+
+}

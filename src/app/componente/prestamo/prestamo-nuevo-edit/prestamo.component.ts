@@ -9,20 +9,22 @@ import { Usuario } from '../../../model/usuario';
 import { PrestamoService } from '../../../services/prestamo.service';
 import { Prestamo } from '../../../model/prestamo';
 import {NavbarComponent} from "../../navbar/navbar.component";
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-prestamo',
   standalone: true,
-    imports: [
-        Button,
-        InputTextModule,
-        TreeSelectModule,
-        RouterLink,
-        PrestamoListarComponent,
-        RouterOutlet,
-        ReactiveFormsModule,
-        NavbarComponent
-    ],
+  imports: [
+    Button,
+    InputTextModule,
+    TreeSelectModule,
+    RouterLink,
+    PrestamoListarComponent,
+    RouterOutlet,
+    ReactiveFormsModule,
+    NavbarComponent,
+    MatButton
+  ],
   templateUrl: './prestamo.component.html',
   styleUrls: ['./prestamo.component.css']
 })

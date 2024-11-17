@@ -3,10 +3,18 @@
 <section id="planesdepago" class="planesdepago">
 
   <div class="botonregistro" style="display: flex; align-items: center; justify-content: space-between;">
-    <h1>Prestamos en Money Control</h1>
-    <button style="font-size:20px;width: 150px; height: 50px;
-    border: 2px  solid red; background-color: greenyellow;
-     color:black"
+    <h1 style="margin-left:400px; display:flex">Controla tus prestamos <br> En Money Control</h1>
+    <button style="font-size: 16px;
+    width: auto;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#24422f  ;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+"
+
             mat-button color="accent"
             [routerLink]="['/Prestamo']">Registrar Prestamo
     </button>
@@ -17,20 +25,32 @@
   <div class="containerSuscripcion">
     <div class="boxF">
       <img src="/assets/estadistica1.jpg" alt="#">
-      <button class="btnSuscribete" style="font-size:20px;width: 150px; height: 50px;
-    border: 2px  solid red; background-color: greenyellow;
-     color:black"
+      <button class="btnSuscribete" style="font-size: 16px;
+    width: 150px; height: 50px;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#204044  ;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap; "
               mat-button color="accent"
-              [routerLink]="['/Prestamofiltrado']">filtrar Prestamo
+              [routerLink]="['/Prestamofiltrado']"> Filtrar Prestamo
       </button>
 
     </div>
 
     <div class="boxF">
       <img src="/assets/estadistica2.jpg" alt="#">
-      <button class="btnSuscribete" style="font-size:20px;width: 150px; height: 50px;
-    border: 4px  solid red; background-color: greenyellow;
-     color:black"
+      <button class="btnSuscribete" style="font-size: 14px;
+    width: 150px; height: 50px;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#204044  ;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap; "
               mat-button color="accent"
               [routerLink]="['/prestamo-correspondiente']">Pago Correspondiente
       </button>
@@ -38,19 +58,39 @@
 
     <div class="boxF">
       <img src="/assets/estadistica1.jpg" alt="#">
-      <button class="btnSuscribete" style="font-size:20px;width: 150px; height: 50px;
-    border: 4px  solid red; background-color: greenyellow;
-     color:black"
+      <button class="btnSuscribete" style="font-size: 14px;
+    width: 180px; height: 50px;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#204044  ;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap; ;
+     color:white"
               mat-button color="accent"
               [routerLink]="['/estadistica']">Mis prestamos estadisticos
       </button>
     </div>
-    <mat-grid-list cols="1" rowHeight="2:1">
 
-      <mat-grid-tile><app-prestamo-listar></app-prestamo-listar> </mat-grid-tile>
-    </mat-grid-list>
+
+
+
+    <div class="boxF">
+      <img src="/assets/estadistica2.jpg" alt="#">
+      <button class="btnSuscribete" style="font-size: 14px;
+    width: 150px; height: 50px;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#204044  ;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap; "
+              mat-button color="accent"
+              [routerLink]="['/Prestamo-Listar']">Ver mis prestamos
+      </button>
+    </div>
 
   </div>
-
-
 </section>

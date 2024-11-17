@@ -19,30 +19,32 @@ import {DatePipe} from '@angular/common';
 import {Prestamo} from '../../../model/prestamo';
 import {PrestamoService} from '../../../services/prestamo.service';
 import {NavbarComponent} from '../../navbar/navbar.component';
+import {Button} from "primeng/button";
 
 
 @Component({
   selector: 'app-prestamo-listar',
   standalone: true,
-  imports: [
-    MatCell,
-    MatCellDef,
-    MatColumnDef,
-    MatHeaderCell,
-    MatHeaderRow,
-    MatHeaderRowDef,
-    MatPaginator,
-    MatRow,
-    MatRowDef,
-    MatSort,
-    MatSortHeader,
-    MatTable,
-    MatButton,
-    RouterLink,
-    MatHeaderCellDef,
-    DatePipe,
-    NavbarComponent
-  ],
+    imports: [
+        MatCell,
+        MatCellDef,
+        MatColumnDef,
+        MatHeaderCell,
+        MatHeaderRow,
+        MatHeaderRowDef,
+        MatPaginator,
+        MatRow,
+        MatRowDef,
+        MatSort,
+        MatSortHeader,
+        MatTable,
+        MatButton,
+        RouterLink,
+        MatHeaderCellDef,
+        DatePipe,
+        NavbarComponent,
+        Button
+    ],
   templateUrl: './prestamo-listar.component.html',
   styleUrl: './prestamo-listar.component.css',
 
@@ -104,4 +106,5 @@ export class PrestamoListarComponent implements OnInit, AfterViewInit{
     });
   }
 
+  protected readonly onsubmit = onsubmit;
 }
