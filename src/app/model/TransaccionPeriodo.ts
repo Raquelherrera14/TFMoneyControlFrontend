@@ -1,4 +1,4 @@
-export class Prestamoperiodo {
+export class TransaccionPeriodo {
 
 
   idUsuario: number=0;

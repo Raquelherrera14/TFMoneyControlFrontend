@@ -1,4 +1,39 @@
-body{
-  display:-webkit-flex;
-  background-color: #26D698;
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #32cd9e; /* Color de fondo */
+}
+
+.image-container img {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.form-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.compact-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compact-table td {
+  padding: 5px 10px;
+  vertical-align: middle;
+}
+
+.compact-table input {
+  width: 100%;
+}
+
+.button-cell {
+  text-align: center;
+  padding-top: 10px;
 }
