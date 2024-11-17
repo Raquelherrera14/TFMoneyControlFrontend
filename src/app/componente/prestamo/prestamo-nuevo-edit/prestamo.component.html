@@ -1,49 +1,47 @@
 <app-navbar></app-navbar>
 <body>
 <form [formGroup]="prestamoForm" class="form-container">
-<div class="flex flex-column md:flex-row">
+  <div class="flex flex-row justify-content-center align-items-center gap-3">
 
-
-  <div class="w-full flex flex-column align-items-center justify-content-center gap-3 py-5">
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">monto</label>
-      <input pInputText id="monto" formControlName="monto" type="text" class="w-12rem" />
+    <!-- Contenedor de la imagen -->
+    <div class="image-container">
+      <img src="https://i.pinimg.com/originals/c1/0a/bc/c10abc801dbd378605a7f7db4201a9ac.gif" alt="Descripción de la imagen" />
     </div>
 
-
-
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">tasaInteres</label>
-      <input pInputText id="tasaInteres" formControlName="tasaInteres" type="text" class="w-12rem" />
+    <!-- Contenedor del formulario en una tabla compacta -->
+    <div class="form-wrapper">
+      <table class="compact-table">
+        <tr>
+          <td><label for="monto">Monto</label></td>
+          <td><input placeholder="1200" pInputText id="monto" formControlName="monto" type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="tasaInteres">Tasa de Interés</label></td>
+          <td><input placeholder="0.10" pInputText id="tasaInteres" formControlName="tasaInteres" type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="fechaInicio">Fecha Inicio</label></td>
+          <td><input pInputText id="fechaInicio" formControlName="fechaInicio" type="date" /></td>
+        </tr>
+        <tr>
+          <td><label for="fechaFin">Fecha Fin</label></td>
+          <td><input pInputText id="fechaFin" formControlName="fechaFin" type="date" /></td>
+        </tr>
+        <tr>
+          <td><label for="estado">Estado</label></td>
+          <td><input placeholder="Por completar" pInputText id="estado" formControlName="estado" type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="codigousuario">ID de Usuario</label></td>
+          <td><input pInputText id="codigousuario" formControlName="idUsuario" type="text" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="button-cell">
+            <p-button label="Dar Préstamo" icon="pi pi-user" (click)="onsubmit()"></p-button>
+          </td>
+        </tr>
+      </table>
     </div>
-
-
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">fechaInicio</label>
-      <input pInputText id="fechaInicio" formControlName="fechaInicio" type="date" class="w-12rem" />
-    </div>
-
-
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">fechaFin</label>
-      <input pInputText id="fechaFin" formControlName="fechaFin" type="date" class="w-12rem" />
-    </div>
-
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">estado</label>
-      <input pInputText id="estado" formControlName="estado" type="text" class="w-12rem" />
-    </div>
-
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">ID de Usuario</label>
-      <input pInputText id="codigousuario" formControlName="idUsuario" type="text" class="w-12rem" />
-    </div>
-
-
-    <p-button label="" icon="pi pi-user" styleClass="w-10rem mx-auto" (click)="onsubmit()">Dar Prestamo</p-button>
-  </div>
   </div>
 </form>
-<app-prestamo-listar />
-
 </body>

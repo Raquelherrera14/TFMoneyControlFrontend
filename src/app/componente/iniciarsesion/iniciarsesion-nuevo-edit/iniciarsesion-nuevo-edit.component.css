@@ -16,3 +16,14 @@ body{
   background-image:url('/assets/fondo2.jpg');
   background-size: cover;
 }
+
+.form-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-title-label {
+  font-size: 1.5rem; /* Tamaño del texto */
+  color: green; /* Color verde */
+  font-weight: bold; /* Texto en negrita */
+}

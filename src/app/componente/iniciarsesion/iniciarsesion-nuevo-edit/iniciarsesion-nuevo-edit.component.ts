@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {Button} from 'primeng/button';
+import {Button, ButtonDirective} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {TreeSelectModule} from 'primeng/treeselect';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
@@ -19,7 +19,8 @@ import {NavbarComponent} from '../../navbar/navbar.component';
     TreeSelectModule,
     FormsModule,
     ReactiveFormsModule,
-    NavbarComponent
+    NavbarComponent,
+    ButtonDirective
   ],
   templateUrl: './iniciarsesion-nuevo-edit.component.html',
   styleUrl: './iniciarsesion-nuevo-edit.component.css'
