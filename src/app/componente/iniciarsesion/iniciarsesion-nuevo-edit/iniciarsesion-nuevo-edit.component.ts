@@ -6,9 +6,10 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 import {Rol} from '../../../model/rol';
 import {TreeNode} from 'primeng/api';
 import {UsuarioService} from '../../../services/usuario.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {Usuario} from '../../../model/usuario';
 import {NavbarComponent} from '../../navbar/navbar.component';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-iniciarsesion-nuevo-edit',
@@ -20,7 +21,9 @@ import {NavbarComponent} from '../../navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     NavbarComponent,
-    ButtonDirective
+    ButtonDirective,
+    MatButton,
+    RouterLink
   ],
   templateUrl: './iniciarsesion-nuevo-edit.component.html',
   styleUrl: './iniciarsesion-nuevo-edit.component.css'
