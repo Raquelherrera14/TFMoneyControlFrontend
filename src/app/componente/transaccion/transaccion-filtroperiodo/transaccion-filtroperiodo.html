@@ -1,3 +1,4 @@
+
 <mat-card class="filter-card">
   <h2>Filtrar Transacciones por Periodo</h2>
   <form [formGroup]="filterForm" (ngSubmit)="applyFilter()" class="filter-form">
@@ -8,13 +9,13 @@
       <mat-datepicker #startPicker></mat-datepicker>
     </mat-form-field>
 
+
     <mat-form-field appearance="fill" class="filter-field">
       <mat-label>Fecha Fin</mat-label>
       <input matInput [matDatepicker]="endPicker" formControlName="fechaTransaccionFin">
       <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
       <mat-datepicker #endPicker></mat-datepicker>
     </mat-form-field>
-
     <button mat-raised-button color="primary" type="submit" class="filter-button">Filtrar</button>
   </form>
 </mat-card>

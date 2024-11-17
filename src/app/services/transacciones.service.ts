@@ -3,6 +3,7 @@ import {environment} from '../../environments/environment';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import {Transacciones} from '../model/transacciones';
+import {TransaccionFiltroperiodo} from '../componente/transaccion/transaccion-filtroperiodo/transaccion-filtroperiodo';
 
 
 @Injectable({
@@ -44,10 +45,10 @@ export class TransaccionesService {
   }
 
 // transacciones.service.ts
-  filterByDateRange(startDate: Date, endDate: Date): Observable<Transacciones[]> {
+  filterByDateRange(startDate: Date, endDate: Date): Observable<TransaccionFiltroperiodo[]> {
     const formattedStart = startDate.toISOString().split('T')[0];
     const formattedEnd = endDate.toISOString().split('T')[0];
-    return this.http.get<Transacciones[]>(`${this.url}/api/TransaccionPeriodo/${formattedStart}/${formattedEnd}`);
+    return this.http.get<TransaccionFiltroperiodo[]>(`${this.url}/api/TransaccionPeriodo/${formattedStart}/${formattedEnd}`);
   }
 
 

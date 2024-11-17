@@ -33,9 +33,9 @@ import { MatNativeDateModule } from '@angular/material/core';  // Agrega esto
 })
 export class TransaccionFiltroperiodo implements OnInit {
   filterForm: FormGroup;
-  transaccion: Transacciones[] = [];
+  transaccion: Transacciones[]| TransaccionFiltroperiodo[] = [];
   displayedColumns: string[] = ['idUsuario', 'nombreUsuario', 'idTransaccion', 'montoTransaccion', 'fechaTransaccion', 'estadoTransaccion'];
-  datasource: MatTableDataSource<Transacciones> = new MatTableDataSource<Transacciones>();
+  datasource: MatTableDataSource<TransaccionFiltroperiodo> = new MatTableDataSource<TransaccionFiltroperiodo>();
 
   constructor(private fb: FormBuilder, private transacccionService: TransaccionesService) {
     this.filterForm = this.fb.group({
@@ -50,11 +50,8 @@ export class TransaccionFiltroperiodo implements OnInit {
 
   loadAllTransaccion(): void {
     this.transacccionService.list().subscribe({
-      next: (data) => {
-        this.transaccion = data;
-        this.datasource.data = this.transaccion;
-      },
-      error: (err) => console.error('Error fetching transaccion:', err)
+      next: (data) => (this.transaccion = data),
+      error: (err) => console.error('Error fetching prestamos:', err)
     });
   }
 
