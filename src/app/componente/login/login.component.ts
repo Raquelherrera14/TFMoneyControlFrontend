@@ -2,7 +2,7 @@ import {Component, inject} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MatButton} from '@angular/material/button';
-import {MatCard, MatCardContent, MatCardTitle} from '@angular/material/card';
+import {MatCard, MatCardActions, MatCardContent, MatCardTitle} from '@angular/material/card';
 import {MatFormField, MatLabel} from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';
 import {MatOption} from '@angular/material/core';
@@ -18,7 +18,7 @@ import {EMPTY} from 'rxjs';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatButton, MatCard, MatCardContent, MatCardTitle, MatFormField, MatInput, MatLabel, MatOption, MatSelect, ReactiveFormsModule, NavbarComponent, MatCheckbox, MatIcon, RouterLink],
+  imports: [CommonModule, FormsModule, MatButton, MatCard, MatCardContent, MatCardTitle, MatFormField, MatInput, MatLabel, MatOption, MatSelect, ReactiveFormsModule, NavbarComponent, MatCheckbox, MatIcon, RouterLink, MatCardActions],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -60,7 +60,7 @@ export class LoginComponent {
         }
       })
       alert("Login ok!")
-      this.router.navigate(['/Iniciarsesion-nuevo-edit'])
+      this.router.navigate(['/comofunciona'])
     } else {
       alert("Formulario no valido,Contra!")
       console.log("Formulario no valido");
