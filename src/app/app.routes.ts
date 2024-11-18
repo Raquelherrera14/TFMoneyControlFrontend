@@ -3,7 +3,6 @@ import {HomeComponent} from './componente/home/home.component';
 import {ComofuncionaComponent} from './componente/comofunciona/comofunciona.component';
 import {ComunidadComponent} from './componente/comunidad/comunidad.component';
 import {InvertirComponent} from './componente/invertir/invertir.component';
-import {SingInComponent} from './componente/singin/sing-in.component';
 import {RegistrarrolComponent} from './componente/registrarrol/registrarrol.component';
 
 import {GarantiaComponent} from './componente/garantia/garantia-nuevo-edit/garantia.component';

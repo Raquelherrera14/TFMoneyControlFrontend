@@ -16,7 +16,6 @@ import {Router, RouterLink} from '@angular/router';
 import {Garantia} from '../../../model/garantia';
 import {MatDialog} from '@angular/material/dialog';
 import {GarantiaService} from '../../../services/garantia.service';
-import {Usuario} from '../../../model/usuario';
 import {ConfirmdialogsesionComponent} from '../../iniciarsesion/confirmdialogsesion/confirmdialogsesion.component';
 import {NavbarComponent} from "../../navbar/navbar.component";
 

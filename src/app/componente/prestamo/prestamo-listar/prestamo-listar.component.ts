@@ -51,7 +51,10 @@ import {Button} from "primeng/button";
 })
 export class PrestamoListarComponent implements OnInit, AfterViewInit{
   lista : Prestamo[] = [];
-  displayedColumns: string[] = ['idPrestamo', 'monto', 'tasaInteres', 'fechaInicio', 'fechaFin', 'estado', 'nombre', 'accion02', 'accion01'];
+  displayedColumns: string[] = ['idPrestamo',
+    'monto', 'tasaInteres', 'fechaInicio',
+    'fechaFin', 'estado', 'nombre',
+    'accion02', 'accion01'];
 
   datasource : MatTableDataSource<Prestamo> = new MatTableDataSource<Prestamo>();
 
