@@ -25,6 +25,8 @@ import {
 import {DatePipe} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {MatNativeDateModule} from '@angular/material/core';
+import {NavbarComponent} from '../../navbar/navbar.component';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-prestamo-filtroperiodo-list',
@@ -57,6 +59,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    NavbarComponent,
+    RouterLink,
 
   ],
   styleUrls: ['./prestamo-filtroperiodo.component.css']

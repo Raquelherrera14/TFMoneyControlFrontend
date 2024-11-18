@@ -118,7 +118,7 @@ export class GarantiaComponent {
           })
         });
       }
-      this.router.navigate(['Garantia']);
+      this.router.navigate(['Garantia-listar']);
       console.log("Formulario valido");
 
     }else {

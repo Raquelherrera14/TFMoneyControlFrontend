@@ -1,66 +1,79 @@
 
+<body>
 
-<br>
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="list-container">
+    <div class="mat-elevation-z8">
+      <h1 style=" font-family: 'UnifrakturMaguntia', cursive; margin-left:150px;  color:black ;"> Garantias Registradas</h1>
 
-<div class="hola">
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="datasource" matSort>
+      <table mat-table [dataSource]="datasource" matSort>
+        <!-- Position Column -->
+        <ng-container matColumnDef="idGarantia">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.idGarantia}} </td>
+        </ng-container>
 
-      <!-- Position Column -->
-      <ng-container matColumnDef="idGarantia">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let element"> {{element.idGarantia}} </td>
-      </ng-container>
+        <!-- Password Column -->
+        <ng-container matColumnDef="tipoGarantia">
+          <th mat-header-cell *matHeaderCellDef> Tipo de Garantia </th>
+          <td mat-cell *matCellDef="let element"> {{element.tipoGarantia}} </td>
+        </ng-container>
 
-      <!-- Password Column -->
-      <ng-container matColumnDef="tipoGarantia">
-        <th mat-header-cell *matHeaderCellDef> Tipo de Garantia </th>
-        <td mat-cell *matCellDef="let element"> {{element.tipoGarantia}} </td>
-      </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="descripcion">
+          <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+          <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+        </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="descripcion">
-        <th mat-header-cell *matHeaderCellDef> Descripcion </th>
-        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
-      </ng-container>
+        <!-- Surname Column -->
+        <ng-container matColumnDef="valorGarantia">
+          <th mat-header-cell *matHeaderCellDef> Valor de Garantia </th>
+          <td mat-cell *matCellDef="let element"> {{element.valorGarantia}} </td>
+        </ng-container>
 
-      <!-- Surname Column -->
-      <ng-container matColumnDef="valorGarantia">
-        <th mat-header-cell *matHeaderCellDef> Valor de Garantia </th>
-        <td mat-cell *matCellDef="let element"> {{element.valorGarantia}} </td>
-      </ng-container>
+        <!-- Role Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Usuario </th>
+          <td mat-cell *matCellDef="let element"> {{element.usuario.email}} </td>
+        </ng-container>
 
-      <!-- Role Column -->
-      <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef> Usuario </th>
-        <td mat-cell *matCellDef="let element"> {{element.usuario.email}} </td>
-      </ng-container>
+        <ng-container matColumnDef="accion02">
+          <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="warn"
+                    (click)="openDialog(element.idGarantia)">
+              <span class="material-icons">delete_sweep</span>
+            </button>
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="accion02">
-        <th mat-header-cell *matHeaderCellDef> Eliminar </th>
-        <td mat-cell *matCellDef="let element">
-          <button mat-raised-button color="warn"
-                  (click)="openDialog(element.idGarantia)"><span class="material-icons">delete_sweep</span></button>
-        </td>
-      </ng-container>
+        <ng-container matColumnDef="accion01">
+          <th mat-header-cell *matHeaderCellDef> Update </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="primary"
+                    [routerLink]="['/Garantia',element.idGarantia]">
+              <span class="material-icons">update</span>
+            </button>
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="accion01">
-        <th mat-header-cell *matHeaderCellDef> Update </th>
-        <td mat-cell *matCellDef="let element">
-          <button mat-raised-button color="primary"
-                  [routerLink]="['/Garantia',element.idGarantia]">
-            <span class="material-icons">update</span>
-          </button>
-        </td>
-      </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                     showFirstLastButtons
+                     aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+  </div>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                   showFirstLastButtons
-                   aria-label="Select page of periodic elements">
-    </mat-paginator>
+  <!-- Contenedor de la imagen y frase -->
+  <div class="image-container">
+    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/insignia-de-garantia-5166473-4316454.png?f=webp" alt="Inspirational Image" />
+    <p class="moving-text">"La excelencia no es un acto, sino un hábito.<br> En money Control Brindamo gariantia<br>
+      Porque la responabilidad y <br>seguridad es nuestro progreso"</p>
   </div>
 </div>
+</body>

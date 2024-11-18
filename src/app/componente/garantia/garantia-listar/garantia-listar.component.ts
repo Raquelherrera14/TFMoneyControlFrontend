@@ -45,6 +45,7 @@ import {NavbarComponent} from "../../navbar/navbar.component";
   styleUrl: './garantia-listar.component.css',
 
 })
+
 export class GarantiaListarComponent implements OnInit, AfterViewInit{
   lista : Garantia[] = [];
   displayedColumns: string[] = ['idGarantia', 'tipoGarantia', 'descripcion', 'valorGarantia', 'email','accion01','accion02']

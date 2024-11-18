@@ -40,8 +40,9 @@ export const routes: Routes = [
   {path:'nuevo-edit',component:IniciarsesionNuevoEditComponent},
   {path:'Iniciarsesion-listar',component:IniciarsesionListarComponent},
   {path:'Iniciarsesion-nuevo-edit/:id',component:IniciarsesionNuevoEditComponent},
-  { path: 'Garantia/:id', component:GarantiaComponent },
 
+  { path: 'Garantia/:id', component:GarantiaComponent },
+  { path: 'Garantia-listar', component:GarantiaListarComponent },
 
   {path:'Transaccion', component:TransaccionNuevoEditComponent},
   {path:'Transaccionlistar', component:TransaccionListarComponent},

@@ -20,6 +20,8 @@ import {
 import { MatDatepicker, MatDatepickerInput, MatDatepickerToggle } from '@angular/material/datepicker';
 import { MatFormField, MatLabel, MatSuffix } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
+import {RouterLink} from '@angular/router';
+import {NavbarComponent} from '../../navbar/navbar.component';
 
 @Component({
   selector: 'app-prestamo-correspondiente',
@@ -49,7 +51,9 @@ import { MatInput } from '@angular/material/input';
     MatRowDef,
     MatSuffix,
     MatTable,
-    MatHeaderCellDef
+    MatHeaderCellDef,
+    RouterLink,
+    NavbarComponent
   ],
   styleUrls: ['./prestamo-correspondiente.component.css']
 })

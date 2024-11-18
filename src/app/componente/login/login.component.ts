@@ -60,7 +60,7 @@ export class LoginComponent {
         }
       })
       alert("Login ok!")
-      this.router.navigate(['/comofunciona'])
+      this.router.navigate(['/Comofunciona'])
     } else {
       alert("Formulario no valido,Contra!")
       console.log("Formulario no valido");

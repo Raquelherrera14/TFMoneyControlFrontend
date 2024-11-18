@@ -1,5 +1,24 @@
+<app-navbar> </app-navbar>
+<div  class="botonregistro" style=" border:10px; margin-left:1500px; margin-right:10px;display: flex; align-items: center; justify-content: space-between;">
+  <button style="font-size: 16px;
+    width: auto;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#24422f  ;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    white-space: nowrap;
+"
+          mat-button color="accent"
+          [routerLink]="['/Invertir']">Salir
+  </button>
+</div>
+<h1 style="margin-left:300px"> Busca tus prestamos por fechas</h1>
+
+
 <mat-card>
-  <form [formGroup]="filterForm" (ngSubmit)="applyFilter()">
+  <form style="margin-left:150px" [formGroup]="filterForm" (ngSubmit)="applyFilter()">
     <mat-form-field appearance="fill">
       <mat-label>Fecha Inicio</mat-label>
       <input matInput [matDatepicker]="startPicker" formControlName="fechaInicioPrestamo">
@@ -18,7 +37,7 @@
   </form>
 </mat-card>
 
-<mat-card>
+<mat-card style="margin-left:150px">
   <table mat-table [dataSource]="datasource" class="mat-elevation-z8">
     <!-- Define columns for your table here (ID, Nombre, Monto, etc.) -->
     <!-- Example of a column: -->

@@ -1,6 +1,44 @@
-.hola{
-  margin: auto;
-width: 70%;
-  background-color: royalblue;
+/* Contenedor principal */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+html,body{
+  background-color: #26D698;
+}
+/* Contenedor de la lista */
+.list-container {
+  flex: 1;
+  margin-right: 20px;
+}
 
+/* Contenedor de la imagen */
+.image-container {
+  flex: 0.4;
+  text-align: center;
+  position: relative;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.moving-text {
+  font-size: 18px;
+  font-weight: bold;
+  animation: moveDown 5s infinite linear;
+}
+
+/* Animación para el texto */
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
 }

@@ -1,19 +1,30 @@
-<app-navbar></app-navbar>
+
 <body>
+<app-navbar></app-navbar>
+<div style="display: flex; justify-content: flex-end; padding: 10px;">
+  <button mat-raised-button [matMenuTriggerFor]="menu">Acciones</button>
+  <mat-menu style="margin-top: 100px; color:seagreen" #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/Transaccionlistar']">Ver Transacciones</button>
+    <button mat-menu-item [routerLink]="['/Transaccionperiodo']">Filtrar Transacciones</button>
+    <button mat-menu-item [routerLink]="['/inicio']">Salir</button>
+  </mat-menu>
+</div>
+<h1 style="display:flex; margin-left:200px; font-family: 'UnifrakturMaguntia', cursive;"> Registra y gestiona tus préstamos<br> de manera rápida, sencilla y segura </h1>
 <form [formGroup]="transaccionForm" class="form-container">
   <div class="flex flex-column md:flex-row align-items-center">
 
-    <!-- Imagen a la izquierda -->
     <div class="w-full md:w-20 flex justify-content-center md:justify-content-start p-3">
       <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp2LTrffk20j7bkUB2uK9RQ6foIUQowngDFdMiO1abtXB-VZExC2pW9IivJhWlBEnV058&usqp=CAU"
            alt="Imagen Transacción" style="width: 500px; height: 500px; border-radius: 0px;">
-      </div>
+    </div>
 
-    <!-- Formulario -->
-    <div class="w-full md:w-7 flex flex-column align-items-center justify-content-center gap-3 py-5">
 
+    <div class="w-full md:w-7 flex flex-column align-items-center justify-content-center gap-3 py-5"
+         style="  background-color: whitesmoke; margin-top:5px; padding:50px " >
+      <h3> Registra tu prestamo <br></h3>
       <!-- Monto de Transacción -->
-      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2" >
+
         <label for="montoTransaccion" class="w-6rem">Monto</label>
         <input
           pInputText
@@ -108,14 +119,4 @@
   </div>
 </form>
 
-<!-- Botón Ver Transacciones -->
-<div class="botontransaacion" style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
-  <button
-    style="font-size:20px; width: 150px; height: 50px; border: 2px solid red; background-color: greenyellow; color: black; border-radius: 5px;"
-    mat-button
-    color="accent"
-    [routerLink]="['/Transaccionlistar']">
-    Ver Transacciones
-  </button>
-</div>
 </body>

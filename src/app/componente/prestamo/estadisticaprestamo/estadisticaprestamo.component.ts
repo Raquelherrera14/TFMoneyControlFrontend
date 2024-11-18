@@ -4,16 +4,20 @@ import {PrestamoService} from '../../../services/prestamo.service';
 import {Estadisticasprestamo} from '../../../model/estadisticasprestamo';
 import {NgIf} from '@angular/common';
 import {NavbarComponent} from "../../navbar/navbar.component";
+import {MatButton} from '@angular/material/button';
+import {RouterLink} from '@angular/router';
 
 
 @Component({
   selector: 'app-estadisticasprestamo',
   templateUrl: './estadisticaprestamo.component.html',
   styleUrls: ['./estadisticaprestamo.component.css'],
-    imports: [
-        NgIf,
-        NavbarComponent
-    ],
+  imports: [
+    NgIf,
+    NavbarComponent,
+    MatButton,
+    RouterLink
+  ],
   standalone: true
 })
 export class EstadisticaprestamoComponent implements OnInit {
@@ -58,6 +62,7 @@ export class EstadisticaprestamoComponent implements OnInit {
   }
 
   createChart() {
+    // @ts-ignore
     this.chart = new Chart('barChart', {
       type: 'bar',
       data: {
@@ -66,9 +71,13 @@ export class EstadisticaprestamoComponent implements OnInit {
           {
             label: 'Estadísticas de Préstamos',
             data: [this.promedioMonto, this.totalMonto, this.cantidadPrestamos],
-            backgroundColor: ['#4caf50', '#2196f3', '#ff5722'],
-            borderColor: ['#388e3c', '#1976d2', '#d32f2f'],
-            borderWidth: 1,
+            backgroundColor: ['#ff00df', '#2196f3', '#f80000'],
+            borderColor: ['#ffd700', '#ffcc00', '#ffcc00'],
+            borderWidth: 3,
+            borderRadius:10,
+            hoverBorderWidth:5,
+            barThickness: 200,
+
           },
         ],
       },

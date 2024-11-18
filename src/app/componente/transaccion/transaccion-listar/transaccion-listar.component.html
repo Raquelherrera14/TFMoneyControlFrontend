@@ -2,11 +2,23 @@
 
 <body>
 <div class="mat-elevation-z8">
+  <button class="btnSalir" style="margin-left:80px; font-size: 14px;
+    width: 100px; height: 40px;
+    left:1500px;
+    display:flex;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#204044  ;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    white-space: nowrap; "
+          mat-button color="accent"
+          [routerLink]="['/Transaccion']">Salir
+  </button>
+<h1 style="margin-left: 400px; font-family: 'UnifrakturMaguntia', cursive;"> 🌟 Historial de Transacciones: <br>Detalles y Movimientos Claves 💼  </h1>
 
-  <div class="botonsalir">
-    <button mat-raised-button color="warn" class="register-button" [routerLink]="['/Transaccion']">salir
-    </button>
-  </div>
+
   <!-- Contenedor principal para dividir en columnas -->
   <div class="contenedor-columnas">
     <!-- Columna del formulario (tabla) -->
@@ -54,15 +66,7 @@
       <!-- Paginador -->
       <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 
-      <!-- Botón Ver Transacciones -->
-      <div class="bototransicion">
-        <button [routerLink]="['/Transaccionperiodo']">Filtrara Mis transacciones</button>
-      </div>
-    </div>
-
-    <div class="columna-imagen">
-      <img src="assets/estadistica2.jpg" alt="Decoración" />
-    </div>
+  </div>
   </div>
 </div>
 </body>

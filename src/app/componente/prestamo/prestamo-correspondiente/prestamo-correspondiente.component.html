@@ -1,5 +1,22 @@
+<app-navbar></app-navbar>
+<body>
+<div class="consultaprestamo" >
+  <button style="font-size: 16px;
+    width: auto;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#24422f  ;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+     margin-left:1600px;
+     display:flex;
+"
 
-<div class="consultaprestamo">
+          mat-button color="accent"
+          [routerLink]="['/Invertir']">Salir
+  </button>
 <h1>Consulta Tu Prestamos</h1>
 
 <mat-form-field appearance="outline">
@@ -8,7 +25,7 @@
 </mat-form-field>
 <button mat-raised-button color="primary" (click)="obtenerPagos()">Buscar</button>
 
-<mat-card>
+<mat-card color="primary">
   <table mat-table [dataSource]="datasource" class="mat-elevation-z8">
     <!-- ID Prestamo Column -->
     <ng-container matColumnDef="prestamoId">
@@ -51,3 +68,4 @@
   </div>
 </mat-card>
 </div>
+</body>

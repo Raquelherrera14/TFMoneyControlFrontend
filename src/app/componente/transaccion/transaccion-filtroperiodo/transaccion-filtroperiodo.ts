@@ -11,7 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { DatePipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MatNativeDateModule } from '@angular/material/core';  // Agrega esto
+import { MatNativeDateModule } from '@angular/material/core';
+import {NavbarComponent} from '../../navbar/navbar.component';  // Agrega esto
 
 @Component({
   selector: 'app-transaccion-filtroperiodo',
@@ -27,7 +28,8 @@ import { MatNativeDateModule } from '@angular/material/core';  // Agrega esto
     MatTableModule,
     DatePipe,
     RouterModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    NavbarComponent
   ],
   styleUrls: ['./transaccion-filtroperiodo.css']
 })

@@ -1,5 +1,25 @@
 
-<mat-card class="filter-card">
+<body>
+<app-navbar> </app-navbar>
+
+
+
+
+<mat-card style="margin-left:90px" class="filter-card">
+  <button class="btnSalir" style="margin-left:20px; font-size: 14px;
+    width: 100px; height: 40px;
+    left:1500px;
+    display:flex;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background-color:#204044  ;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    white-space: nowrap; "
+          mat-button color="accent"
+          [routerLink]="['/Transaccion']">Salir
+  </button>
   <h2>Filtrar Transacciones por Periodo</h2>
   <form [formGroup]="filterForm" (ngSubmit)="applyFilter()" class="filter-form">
     <mat-form-field appearance="fill" class="filter-field">
@@ -20,7 +40,7 @@
   </form>
 </mat-card>
 
-<mat-card class="results-card">
+<mat-card style="margin-left:90px" class="results-card">
   <h2>Resultados de la Búsqueda</h2>
   <table mat-table [dataSource]="datasource" class="mat-elevation-z8 custom-table">
     <ng-container matColumnDef="idUsuario">
@@ -58,7 +78,4 @@
   </table>
 </mat-card>
 
-<div class="botonregistro">
-  <button mat-raised-button color="accent" class="register-button" [routerLink]="['/Transaccion']">salir
-  </button>
-</div>
+</body>

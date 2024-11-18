@@ -1,32 +1,51 @@
-<app-navbar></app-navbar>
 <body>
-<form [formGroup]="garantiaForm" class="form-container">
-<div class="flex flex-column md:flex-row">
-  <div class="w-full flex flex-column align-items-center justify-content-center gap-3 py-5">
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">Tipo de Garantia</label>
-      <input pInputText id="tipogarantia" formControlName="tipoGarantia" type="text" class="w-12rem" />
-    </div>
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">Valor Garantia</label>
-      <input pInputText id="valorgarantia" formControlName="valorGarantia" type="text" class="w-12rem" />
-    </div>
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">ID de Usuario</label>
-      <input pInputText id="codigousuario" formControlName="idUsuario" type="text" class="w-12rem" />
-    </div>
-    <div class="flex flex-wrap justify-content-center align-items-center gap-2">
-      <label class="w-6rem">Descripcion</label>
-      <input pInputText id="descripcion" formControlName="descripcion" type="text" class="w-12rem" />
-    </div>
+<app-navbar></app-navbar>
 
+<div
+  style="display: flex; align-items: center; justify-content: center; gap: 20px; padding: 20px; flex-wrap: wrap;">
+  <h1 style=" font-family: 'UnifrakturMaguntia', cursive; margin-left:150px;  color:black; text-align: center;">
+    ¡Asegura tu inversión! Registra tu garantía y mantén el control.
+  </h1>
 
-    <p-button label="" icon="pi pi-user" styleClass="w-10rem mx-auto" (click)="onsubmit()">Dar Garantia</p-button>
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <img
+      src="https://img.freepik.com/fotos-premium/mano-es-simbolo-mas-altos-estandares-garantia-garantia-calidad-servicio-certificacion-iso-estandarizacion-satisfaccion-ideas-experiencia-servicio_27634-1178.jpg"
+      alt="imagen1"
+      style="max-width: 600px; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);"
+    />
   </div>
-  </div>
-</form>
+
+  <!-- Formulario -->
+  <form
+    style="flex: 1; max-width: 400px; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);"
+    [formGroup]="garantiaForm"
+    class="form-container"
+  >
+    <div class="flex flex-column gap-3">
+      <h3 style="text-align: center; margin-bottom: 20px;">Dar Garantía</h3>
+
+      <div class="flex flex-wrap justify-content-between align-items-center gap-2">
+        <label class="w-6rem">Tipo de Garantía</label>
+        <input pInputText id="tipogarantia" formControlName="tipoGarantia" type="text" class="w-12rem" />
+      </div>
+
+      <div class="flex flex-wrap justify-content-between align-items-center gap-2">
+        <label class="w-6rem">Valor Garantía</label>
+        <input pInputText id="valorgarantia" formControlName="valorGarantia" type="text" class="w-12rem" />
+      </div>
+
+      <div class="flex flex-wrap justify-content-between align-items-center gap-2">
+        <label class="w-6rem">ID de Usuario</label>
+        <input pInputText id="codigousuario" formControlName="idUsuario" type="text" class="w-12rem" />
+      </div>
+
+      <div class="flex flex-wrap justify-content-between align-items-center gap-2">
+        <label class="w-6rem">Descripción</label>
+        <input pInputText id="descripcion" formControlName="descripcion" type="text" class="w-12rem" />
+      </div>
+
+      <p-button label="Dar Garantía" icon="pi pi-user" styleClass="w-full" (click)="onsubmit()"></p-button>
+    </div>
+  </form>
+</div>
 </body>
-<app-garantia-listar />
-
-
-

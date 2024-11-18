@@ -12,7 +12,13 @@ import {Transacciones} from '../../../model/transacciones';
 import {Prestamo} from '../../../model/prestamo';
 import {TransaccionesService} from '../../../services/transacciones.service';
 import {NavbarComponent} from '../../navbar/navbar.component';
-import {MatButton} from '@angular/material/button';
+import {MatButton, MatFabButton} from '@angular/material/button';
+import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
+import {MatFormField, MatLabel} from '@angular/material/form-field';
+import {MatOption} from '@angular/material/core';
+import {MatSelect} from '@angular/material/select';
+import {MatInput} from '@angular/material/input';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-transaccion-nuevo-edit',
@@ -26,7 +32,17 @@ import {MatButton} from '@angular/material/button';
     ReactiveFormsModule,
     TransaccionListarComponent,
     NavbarComponent,
-    MatButton
+    MatButton,
+    MatMenu,
+    MatMenuItem,
+    MatMenuTrigger,
+    MatFormField,
+    MatOption,
+    MatSelect,
+    MatInput,
+    MatIcon,
+    MatFabButton,
+    MatLabel
   ],
   templateUrl: './transaccion-nuevo-edit.component.html',
   styleUrl: './transaccion-nuevo-edit.component.css'
