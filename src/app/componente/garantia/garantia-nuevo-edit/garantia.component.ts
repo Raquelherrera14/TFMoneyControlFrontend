@@ -5,7 +5,6 @@ import {TreeSelectModule} from 'primeng/treeselect';
 import {ActivatedRoute, Router, RouterLink, RouterOutlet} from '@angular/router';
 import {GarantiaListarComponent} from '../garantia-listar/garantia-listar.component';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {UsuarioService} from '../../../services/usuario.service';
 import {GarantiaService} from '../../../services/garantia.service';
 import {Usuario} from '../../../model/usuario';
 import {Garantia} from '../../../model/garantia';

@@ -1,6 +1,6 @@
 import {inject, Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import {Transacciones} from '../model/transacciones';
 import {TransaccionFiltroperiodo} from '../componente/transaccion/transaccion-filtroperiodo/transaccion-filtroperiodo';

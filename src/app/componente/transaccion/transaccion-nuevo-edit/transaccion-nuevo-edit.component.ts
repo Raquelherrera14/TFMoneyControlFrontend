@@ -4,9 +4,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/
 import {Button} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {TreeSelectModule} from 'primeng/treeselect';
-import {ActivatedRoute, Router, RouterLink, RouterOutlet} from '@angular/router';
-import {Garantia} from '../../../model/garantia';
-import {Usuario} from '../../../model/usuario';
+import { Router, RouterLink, RouterOutlet} from '@angular/router';
 import {TransaccionListarComponent} from '../transaccion-listar/transaccion-listar.component';
 import {Transacciones} from '../../../model/transacciones';
 import {Prestamo} from '../../../model/prestamo';
